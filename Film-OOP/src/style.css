@@ -1,0 +1,221 @@
+/* Strakke moderne style.css met zwart, wit en grijs in perfecte balans */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #f2f2f2;
+  color: #1e1e1e;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.container {
+  width: 100%;
+  max-width: 960px;
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  color: #111;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+header p {
+  color: #555;
+  margin-top: 8px;
+}
+
+/* Navigatie */
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.nav a {
+  text-decoration: none;
+  padding: 10px 18px;
+  background: #e6e6e6;
+  color: #111;
+  border-radius: 8px;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  transition: all 0.3s ease;
+}
+
+.nav a:hover {
+  background: #111;
+  color: #fff;
+  border-color: #111;
+}
+
+/* Knoppen */
+.btn {
+  background: #111;
+  color: white;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background: #333;
+}
+
+.btn-light {
+  background: #e6e6e6;
+  color: #111;
+}
+
+.btn-light:hover {
+  background: #ccc;
+}
+
+/* Invoervelden */
+input, textarea, select {
+  width: 100%;
+  padding: 12px 14px;
+  margin-bottom: 18px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafa;
+  color: #111;
+  transition: border-color 0.2s ease, background 0.2s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #111;
+  background: #fff;
+  outline: none;
+}
+
+/* Kaarten */
+.card {
+  background: #f7f7f7;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: #fff;
+  border-color: #ccc;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.card h3 {
+  color: #111;
+  margin-bottom: 10px;
+  border-left: 4px solid #111;
+  padding-left: 10px;
+}
+
+/* Tabellen */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+th, td {
+  padding: 14px 16px;
+  text-align: left;
+}
+
+th {
+  background: #111;
+  color: #fff;
+  letter-spacing: 0.5px;
+}
+
+td {
+  background: #f9f9f9;
+  color: #333;
+  border-bottom: 1px solid #ddd;
+}
+
+tr:hover td {
+  background: #efefef;
+}
+
+/* Sectietitel */
+.section-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 25px 0 10px;
+  color: #111;
+  border-bottom: 2px solid #111;
+  display: inline-block;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  padding-top: 20px;
+  font-size: 0.9rem;
+  color: #555;
+  border-top: 1px solid #ccc;
+}
+
+/* Animatie bij laden */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.container, .card, .nav a, .btn {
+  animation: fadeIn 0.6s ease forwards;
+}
+
+/* Responsief ontwerp */
+@media (max-width: 700px) {
+  .container {
+    padding: 25px;
+  }
+  header h1 {
+    font-size: 2rem;
+  }
+  .nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav a {
+    width: 90%;
+    text-align: center;
+  }
+}
